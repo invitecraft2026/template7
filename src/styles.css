@@ -1,0 +1,277 @@
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+/*
+ * Design system definition.
+ *
+ * The @theme inline block maps CSS custom properties to Tailwind utility
+ * classes (e.g. --color-primary -> bg-primary, text-primary).
+ *
+ * The :root and .dark blocks define the actual color values using oklch.
+ * All colors MUST use oklch format.
+ *
+ * To add a new semantic color:
+ * 1. Add the variable to :root (light value) and .dark (dark value)
+ * 2. Register it in @theme inline as --color-<name>: var(--<name>)
+ */
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
+  --radius-3xl: calc(var(--radius) + 12px);
+  --radius-4xl: calc(var(--radius) + 16px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-ring-offset-background: var(--background);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+  --color-ivory: var(--ivory);
+  --color-cream: var(--cream);
+  --color-champagne: var(--champagne);
+  --color-gold: var(--gold);
+  --color-gold-soft: var(--gold-soft);
+  --color-beige: var(--beige);
+  --color-deep: var(--deep-text);
+  --color-soft-white: var(--soft-white);
+  --font-script: "Great Vibes", cursive;
+  --font-serif: "Cormorant Garamond", Georgia, serif;
+  --font-sans: "Cormorant Garamond", Georgia, serif;
+}
+
+
+:root {
+  --radius: 0.25rem;
+
+  /* Luxury wedding palette */
+  --ivory: oklch(0.9723 0.0113 88);
+  --cream: oklch(0.9521 0.0173 84);
+  --champagne: oklch(0.8158 0.0483 79);
+  --gold: oklch(0.6853 0.0623 78);
+  --gold-soft: oklch(0.7748 0.0451 79);
+  --beige: oklch(0.8452 0.0281 80);
+  --deep-text: oklch(0.4438 0.0248 68);
+  --soft-white: oklch(0.9914 0.0053 89);
+
+  /* Website background #f2ebe1 (same color, written in oklch) */
+  --background: oklch(0.9428 0.0153 77.1);
+  --foreground: var(--deep-text);
+  --card: var(--soft-white);
+  --card-foreground: var(--deep-text);
+  --popover: var(--soft-white);
+  --popover-foreground: var(--deep-text);
+  --primary: var(--gold);
+  --primary-foreground: var(--soft-white);
+  --secondary: var(--cream);
+  --secondary-foreground: var(--deep-text);
+  --muted: var(--cream);
+  --muted-foreground: oklch(0.588 0.0221 70);
+  --accent: var(--champagne);
+  --accent-foreground: var(--deep-text);
+  --destructive: oklch(0.577 0.145 27.325);
+  --destructive-foreground: var(--soft-white);
+  --border: var(--beige);
+  --input: var(--beige);
+  --ring: var(--gold);
+  --chart-1: var(--gold);
+  --chart-2: var(--champagne);
+  --chart-3: var(--beige);
+  --chart-4: var(--cream);
+  --chart-5: var(--deep-text);
+  --sidebar: var(--cream);
+  --sidebar-foreground: var(--deep-text);
+  --sidebar-primary: var(--gold);
+  --sidebar-primary-foreground: var(--soft-white);
+  --sidebar-accent: var(--champagne);
+  --sidebar-accent-foreground: var(--deep-text);
+  --sidebar-border: var(--beige);
+  --sidebar-ring: var(--gold);
+}
+
+
+.dark {
+  --background: oklch(0.129 0.042 264.695);
+  --foreground: oklch(0.984 0.003 247.858);
+  --card: oklch(0.208 0.042 265.755);
+  --card-foreground: oklch(0.984 0.003 247.858);
+  --popover: oklch(0.208 0.042 265.755);
+  --popover-foreground: oklch(0.984 0.003 247.858);
+  --primary: oklch(0.929 0.013 255.508);
+  --primary-foreground: oklch(0.208 0.042 265.755);
+  --secondary: oklch(0.279 0.041 260.031);
+  --secondary-foreground: oklch(0.984 0.003 247.858);
+  --muted: oklch(0.279 0.041 260.031);
+  --muted-foreground: oklch(0.704 0.04 256.788);
+  --accent: oklch(0.279 0.041 260.031);
+  --accent-foreground: oklch(0.984 0.003 247.858);
+  --destructive: oklch(0.704 0.191 22.216);
+  --destructive-foreground: oklch(0.984 0.003 247.858);
+  --border: oklch(1 0 0 / 10%);
+  --input: oklch(1 0 0 / 15%);
+  --ring: oklch(0.551 0.027 264.364);
+  --chart-1: oklch(0.488 0.243 264.376);
+  --chart-2: oklch(0.696 0.17 162.48);
+  --chart-3: oklch(0.769 0.188 70.08);
+  --chart-4: oklch(0.627 0.265 303.9);
+  --chart-5: oklch(0.645 0.246 16.439);
+  --sidebar: oklch(0.208 0.042 265.755);
+  --sidebar-foreground: oklch(0.984 0.003 247.858);
+  --sidebar-primary: oklch(0.488 0.243 264.376);
+  --sidebar-primary-foreground: oklch(0.984 0.003 247.858);
+  --sidebar-accent: oklch(0.279 0.041 260.031);
+  --sidebar-accent-foreground: oklch(0.984 0.003 247.858);
+  --sidebar-border: oklch(1 0 0 / 10%);
+  --sidebar-ring: oklch(0.551 0.027 264.364);
+}
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+  }
+}
+
+@layer base {
+  html {
+    -webkit-tap-highlight-color: transparent;
+  }
+  body {
+    font-family: var(--font-serif);
+    overflow-x: hidden;
+  }
+  .is-locked {
+    overflow: hidden;
+    height: 100svh;
+  }
+}
+
+@utility font-script {
+  font-family: var(--font-script);
+}
+
+@utility tracking-luxe {
+  letter-spacing: 0.32em;
+}
+
+@utility text-gold-gradient {
+  background-image: linear-gradient(
+    100deg,
+    var(--gold) 0%,
+    var(--champagne) 45%,
+    var(--gold) 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+@utility gold-rule {
+  height: 1px;
+  background-image: linear-gradient(
+    to right,
+    transparent,
+    var(--champagne),
+    var(--gold),
+    var(--champagne),
+    transparent
+  );
+}
+
+@utility card-luxe {
+  background-color: var(--soft-white);
+  border: 1px solid color-mix(in oklab, var(--champagne) 60%, transparent);
+  box-shadow: 0 18px 40px -32px color-mix(in oklab, var(--deep-text) 40%, transparent);
+}
+
+@utility tabular {
+  font-variant-numeric: tabular-nums;
+  font-feature-settings: "tnum";
+}
+
+
+
+/* ===== Website background: #f2ebe1 ===== */
+html,
+body,
+#root {
+  margin: 0;
+  min-height: 100%;
+  background: #f2ebe1;
+}
+
+html {
+  overscroll-behavior-y: none;
+}
+
+body {
+  overflow-x: hidden;
+  background-color: #f2ebe1;
+}
+
+video {
+  display: block;
+}
+
+.wedding-title {
+  color: #f5d9a8;
+  text-shadow:
+    0 2px 4px rgba(0, 0, 0, 0.65),
+    0 4px 18px rgba(0, 0, 0, 0.4);
+}
+
+.wedding-light {
+  color: #fff8f0;
+  text-shadow:
+    0 1px 3px rgba(0, 0, 0, 0.75),
+    0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.wedding-muted {
+  color: rgba(255, 244, 234, 0.9);
+  text-shadow:
+    0 1px 3px rgba(0, 0, 0, 0.7),
+    0 2px 8px rgba(0, 0, 0, 0.4);
+}
+
+.wedding-label {
+  color: #ecd2a7;
+  text-shadow:
+    0 1px 4px rgba(0, 0, 0, 0.75);
+}
