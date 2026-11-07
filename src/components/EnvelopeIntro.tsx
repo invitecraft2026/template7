@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 
-import envelopeClosed from "@/assets/frist-frame.jpg";
+import envelopeClosed from "@/assets/colorfull_envlop.jpg";
 import envelopeOpening from "@/assets/Wedding_invitation.mp4";
 
 export type IntroState = "closed" | "opening" | "complete";

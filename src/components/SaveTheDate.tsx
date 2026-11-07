@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { wedding } from "@/config/wedding";
-import countdownBg from "@/assets/countdown-bg-vertical.png";
+import countdownBg from "@/assets/celebration_frame.png";
 
 import { Reveal } from "./Reveal";
 

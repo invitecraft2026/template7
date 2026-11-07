@@ -3,7 +3,7 @@ import { wedding } from "@/config/wedding";
 
 // 👉 Replace src/assets/hero-section-image.jpg with the new image
 //    (the sage lace one with the oval and the ivory strip at the bottom)
-import floralBackground from "@/assets/hero-section-image.jpg";
+import floralBackground from "@/assets/colorfull_hero_section.jpg";
 
 /**
  * IMAGE GEOMETRY (measured on the 1438 x 2576 image)

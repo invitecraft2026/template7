@@ -1,9 +1,9 @@
 import { wedding, type WeddingEvent } from "@/config/wedding";
 
-import archIllustration from "@/assets/Welcome Drinks.png";
-import mehndiIllustration from "@/assets/Wedding Ceremony.png";
-import ringsIllustration from "@/assets/Reception.png";
-import dinnerIllustration from "@/assets/Farewell Brunch.png";
+import archIllustration from "@/assets/arch.png";
+import mehndiIllustration from "@/assets/drinks.png";
+import ringsIllustration from "@/assets/ring.png";
+import dinnerIllustration from "@/assets/table.png";
 
 import { SectionHeading } from "./Ornament";
 import { Reveal } from "./Reveal";

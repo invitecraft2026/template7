@@ -1,7 +1,7 @@
 /**
  * CENTRAL WEDDING CONFIGURATION
  * Every editable detail of the invitation lives here.
- * Temporary placeholder details (couple initials: A & B).
+ * Temporary placeholder details (couple initials: S & N).
  * Replace the values below with the real wedding details.
  */
 
@@ -16,32 +16,32 @@ export type WeddingEvent = {
 
 export const wedding = {
   bride: {
-    firstName: "Amelia",
-    fullName: "Amelia Anderson",
-    parents: "Daughter of Mr. Arthur Anderson & Mrs. Alice Anderson",
+    firstName: "Sophia",
+    fullName: "Sophia Laurent",
+    parents: "Daughter of Mr. Henry Laurent & Mrs. Clara Laurent",
   },
 
   groom: {
-    firstName: "Benjamin",
-    fullName: "Benjamin Brooks",
-    parents: "Son of Mr. Bernard Brooks & Mrs. Beatrice Brooks",
+    firstName: "Nathaniel",
+    fullName: "Nathaniel Hayes",
+    parents: "Son of Mr. Richard Hayes & Mrs. Eleanor Hayes",
   },
 
-  initials: "A & B",
+  initials: "S & N",
 
   /** Human readable date + time */
-  date: "Saturday, 15 May 2027",
+  date: "Saturday, 12 June 2027",
 
   dayName: "Saturday",
-  dayNumber: "15",
-  monthName: "May",
+  dayNumber: "12",
+  monthName: "June",
   year: "2027",
 
-  time: "4:00 PM onwards",
+  time: "5:00 PM onwards",
 
   /** Used by countdown + calendar */
-  dateISO: "2027-05-15T16:00:00",
-  endISO: "2027-05-15T22:00:00",
+  dateISO: "2027-06-12T17:00:00",
+  endISO: "2027-06-12T23:00:00",
 
   welcomeLine: "Together with our families",
 
@@ -50,52 +50,52 @@ export const wedding = {
   welcomeJoin: "of",
 
   venue: {
-    name: "The Aurelia Bay Estate",
-    address: "Lakeview Road, Kakkanad, Kochi, Kerala 682030",
-    mapsQuery: "The Aurelia Bay Estate, Kakkanad, Kochi",
+    name: "Villa Bellavista",
+    address: "Via Regina 24, Tremezzina, Lake Como, Lombardy 22016, Italy",
+    mapsQuery: "Villa Bellavista, Tremezzina, Lake Como, Italy",
   },
 
   events: [
     {
       id: "welcome",
-      title: "Welcome Drinks",
-      date: "Friday, 14 May 2027",
-      time: "6:30 PM",
-      venue: "The Aurelia Bay Estate, Lawn",
+      title: "Welcome Aperitivo",
+      date: "Friday, 11 June 2027",
+      time: "7:00 PM",
+      venue: "Villa Bellavista, Lakeside Garden",
       icon: "lantern",
     },
 
     {
       id: "ceremony",
       title: "Wedding Ceremony",
-      date: "Saturday, 15 May 2027",
-      time: "4:00 PM",
-      venue: "The Aurelia Bay Estate",
+      date: "Saturday, 12 June 2027",
+      time: "5:00 PM",
+      venue: "Villa Bellavista, Rose Terrace",
       icon: "crescent",
     },
 
     {
       id: "reception",
-      title: "Reception",
-      date: "Saturday, 15 May 2027",
-      time: "5:30 PM",
-      venue: "The Aurelia Bay Estate, Ballroom",
+      title: "Dinner & Reception",
+      date: "Saturday, 12 June 2027",
+      time: "6:30 PM",
+      venue: "Villa Bellavista, Grand Salon",
       icon: "rings",
     },
 
     {
       id: "brunch",
       title: "Farewell Brunch",
-      date: "Sunday, 16 May 2027",
-      time: "10:30 AM",
-      venue: "The Aurelia Bay Estate, Terrace",
+      date: "Sunday, 13 June 2027",
+      time: "11:00 AM",
+      venue: "Villa Bellavista, Orangery",
       icon: "dinner",
     },
   ] satisfies WeddingEvent[],
 
   dressCode: {
     description:
-      "We invite you to celebrate with us in elegant attire inspired by soft, romantic and earthy tones.",
+      "We invite you to celebrate with us in refined attire inspired by soft, romantic tones of burgundy, blush and sage.",
 
     colors: [
       {
@@ -115,50 +115,50 @@ export const wedding = {
         hex: "#6B2637",
       },
       {
-        name: "Mauve",
-        hex: "#A8808A",
-      },
-      {
         name: "Sage",
         hex: "#A8B09A",
       },
       {
-        name: "Warm Brown",
-        hex: "#7A5A48",
+        name: "Charcoal",
+        hex: "#4A4A4C",
+      },
+      {
+        name: "Soft Taupe",
+        hex: "#B8A590",
       },
     ],
   },
 
   invitationMessage:
-    "With immense joy and gratitude, together with our families, we warmly invite you to celebrate the beginning of our forever and share in the laughter, love and beautiful memories of our special day.",
+    "With hearts full of joy and gratitude, together with our families, we warmly invite you to celebrate the beginning of our new chapter and share in the laughter, love and beautiful memories of our special day.",
 
   quote:
-    "“Whatever our souls are made of, his and mine are the same.” — Emily Brontë",
+    "“I have found the one whom my soul loves.” — Song of Solomon 3:4",
 
   guestInformation: [
     {
       title: "Arrival",
-      body: "We kindly request our guests to arrive at least 20 minutes before the ceremony begins.",
+      body: "We kindly request our guests to be seated at least 15 minutes before the ceremony begins.",
     },
 
     {
       title: "Dress Code",
-      body: "Elegant semi-formal attire in soft earthy, burgundy, champagne and neutral tones is warmly encouraged.",
+      body: "Elegant formal attire in soft burgundy, blush, sage, champagne and neutral tones is warmly encouraged.",
     },
 
     {
       title: "Family",
-      body: "Families and children are warmly welcome to join us in celebrating this beautiful occasion.",
+      body: "Children are warmly welcome at the ceremony and brunch. The evening reception is for guests aged 12 and over.",
     },
 
     {
       title: "Parking",
-      body: "Complimentary guest parking will be available at the venue. Venue staff will be present to assist you on arrival.",
+      body: "Valet parking will be available at the villa entrance. Our team will be on hand to guide you on arrival.",
     },
 
     {
       title: "Photography",
-      body: "We would love for you to enjoy the ceremony with us. Kindly avoid flash photography during the vows.",
+      body: "We invite you to be fully present with us during the ceremony. Kindly keep phones away until after the vows.",
     },
 
     {
@@ -173,7 +173,7 @@ export const wedding = {
   footer: {
     signOff: "With Love & Gratitude,",
     thanks:
-      "We look forward to celebrating this beautiful beginning with you.",
+      "We cannot wait to celebrate this beautiful beginning with you.",
   },
 } as const;
 
